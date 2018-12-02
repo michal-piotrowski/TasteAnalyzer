@@ -1,0 +1,24 @@
+<div id="separationBackground">
+
+</div>
+
+<div id="registrationForm" class="column center aligned middle aligned transition">
+  <form #f="ngForm" class="ui container form" (submit)="registerNewUser()">
+    <p>
+      <strong>Registration Form</strong>
+      <input type="text" name="loginInput" (click)="toggleSep()"
+             [(ngModel)]="registrationData.login" required placeholder="Login">
+    </p>
+    <p>
+      <input type="password" name="passwordInput"
+             [(ngModel)]="registrationData.password" required placeholder="Password">
+    </p>
+    <p>
+      <input type="password" name="passwordRepeatInput"
+             [(ngModel)]="registrationData.repeatPassword" required placeholder="Repeat Password">
+    </p>
+    <p>
+      <button class="ui button" type="submit" [disabled]="!f.valid">Submit</button>
+    </p>
+  </form>
+</div>

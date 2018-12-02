@@ -1,0 +1,16 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!--<div style="text-align:center">-->
+  <!--<h1>-->
+    <!--Welcome to {{ title }}!-->
+  <!--</h1>-->
+  <!--<app-login-form></app-login-form>-->
+<!--</div>-->
+
+<div id="topMenu" class="ui three item menu">
+    <a class="active item" id="homeItem" routerLinkActive="active" routerLink="/home">Home</a>
+    <a class="item" routerLinkActive="active" routerLink="/login">Login</a>
+    <a [hidden]="true" class="item" (click)="logout()">Logout</a>
+</div>
+<div class="ui middle aligned center aligned grid">
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,23 @@
+<app-registration-form [hidden]="!shouldShowRegForm">
+
+</app-registration-form>
+
+<div id="loginForm" class="column">
+  <form #f="ngForm" class="ui container form" (ngSubmit)="onSubmit()">
+    <p>
+      <input class="ui four column wide" type="text" name="loginInput"
+             [(ngModel)]="creds.login" required placeholder="Login">
+    </p>
+    <p>
+      <input class="" type="password" name="passwordInput"
+             [(ngModel)]="creds.password" required placeholder="Password">
+    </p>
+    <p>
+      <button class="ui button" type="submit" [disabled]="!f.valid">Submit</button>
+    </p>
+  </form>
+</div>
+
+<div id="regDiv" class="column">
+  You don't have an account yet? <a (click)="toggleRegFormVisibility()"> Join in</a>
+</div>

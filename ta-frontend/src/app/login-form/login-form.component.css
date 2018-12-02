@@ -1,0 +1,14 @@
+.column {
+  margin-right:2em;
+  max-width: 500px;
+  padding: 1.4em;
+  box-shadow: 0px 0px 10px #3c5876;
+}
+
+#loginForm {
+  margin-top:1.4em;
+}
+
+#regDiv {
+  margin-top:1.4em;
+}

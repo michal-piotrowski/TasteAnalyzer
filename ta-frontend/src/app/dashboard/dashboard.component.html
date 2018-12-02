@@ -1,0 +1,17 @@
+<div [hidden]="!authenticated()">
+  Dashboard Works!1 and you have access to it
+  <!--<p> Your id: {{getLogin()}}</p>-->
+  <app-connect-spotify-account [hidden]="!connectedSpotifyAccount()">
+
+  </app-connect-spotify-account>
+  <div class="ui grid container">
+    <h1>Hello, Michał Piotrowski</h1>
+  </div>
+</div>
+<div [hidden]="authenticated()">
+  <app-registration-form [hidden]="showRegistrationForm">
+    APP REGISTRATION FORM
+  </app-registration-form>
+  <h2>Welcome to TasteAnalyzer, feel free to <a (click)="showRegistrationForm()">register</a> to start getting more conscious about the music you're listening to or
+    <a (click)="deselectHomeBar()"> login to your account </a></h2><!--s-->
+</div>
